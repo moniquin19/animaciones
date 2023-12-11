@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Hind', sans-serif;
+    color: white;
+}
+
+.content {
+    display: grid;
+    grid-template-areas: 
+    "nav filters" 
+    "nav section" 
+    "footer pagination";
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    text-align: center;
+    background-color: #7e3494;
+}
+
+.material-symbols-outlined {
+    display: none !important;
+}
+
+.filters {
+    grid-area: filters;
+    background-color: #3dc0c6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0 1rem;
+}
+
+section {
+    grid-area: section;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    padding: 4em;
+}
+
+select {
+    color: #515151;
+    background-color: #FFF;
+    min-width: 80rem;
+}
+
+option {
+    color: #515151;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+}
+
+.pagination {
+    grid-area: pagination;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #3dc0c6;
+    padding: 1em;
+    text-align: center;
+}
+
+td {
+    color: #515151;
+    border: 1px solid #515151;
+    padding: 5px 10px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    color: #515151;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    padding: 0.5em;
+    margin: 1.5em;
+    background-color: #2484c6;
+    border: none;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    color: #515151;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    .content {
+        display: grid;
+        grid-template-areas: 
+        "nav " 
+        "filters"
+        "section" 
+        "pagination"
+        "footer";
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    ul {
+        display: none;
+    }
+
+    .material-symbols-outlined {
+        display: inline-block !important;
+    }
+
+    select {
+        color: #515151;
+        background-color: #FFF;
+        min-width: 30em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .filters {
+        padding: 0;
+        padding-bottom: 0.5em;
+    }
+
+    section {
+        grid-template-columns: auto;
+        padding: 2em;
+    }
+
+    section div:not(:first-child) {
+        display: none;
+    }
+
+    .pagination {
+        padding-bottom: 0.5em;
+    }
+
+    button {
+        margin: 0;
+    }
+
+    footer {
+        padding: 1em;
+    }
+    
+}
+    
